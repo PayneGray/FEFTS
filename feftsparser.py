@@ -1,5 +1,14 @@
 #!/usr/bin/python
 # :*: coding: utf_8 :*:
+
+import re
+
+#steps
+#parse through string
+#convert
+#print out
+#i'll work on a window later but for now
+
 def reverse(dictionary):
 	# for sifting through the reference list
 	# I've set up the ones that matter. NPCs will come later.
@@ -18,8 +27,6 @@ keyword = {
 "$id":"$Ws",
 "\\n":"|",
 "$emote":"$Wa$E"}
-for key in keyword:
-	print key
 
 
 emote = {
@@ -112,3 +119,8 @@ nohr2 = {
 	"Ignatius": "イグニス",
 	"Nina": "エポニーヌ",
 	"Percy": "ルッツ"}
+print "$show"+"Nina"+"|"+"$left"+"|"+"$id"+"Nina"+"|"+"$emote"+"smug"+",|"+"Hey Brian! Look! It works! :D"
+
+print "will parse into"
+print keyword["$show"]+nohr2["Nina"]+"|"+keyword["$left"]+"|"+keyword["$id"]+nohr2["Nina"]+"|"+keyword["$emote"]+emote["smug"]+",|"+"Hey Brian! Look! It works! :D"
+print "then we copy paste to the right >>>"
